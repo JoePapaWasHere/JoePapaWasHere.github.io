@@ -1,3 +1,2 @@
 # Joe Papa Was Here
-Here is my [LinkedIn](https://www.linkedin.com/in/josephpapa3/).
-theme: minima
+Here is my [LinkedIn](https://www.linkedin.com/in/josephpapa3/)
