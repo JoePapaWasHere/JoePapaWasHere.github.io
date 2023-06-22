@@ -15,11 +15,39 @@
 		and be able to share it with the world. Thanks for tagging along on this journey. If you'd like to learn more about me professionally, check out my linkedin linked below.</p>
 		<h2>MEDIUM</h2>
 		<h3>SMALL</h3>
+		<!--
 		<a href="https://www.linkedin.com/in/josephpapa3/">LINKEDIN</a>
+		-->
+		<form>
+			<button formaction="https://www.linkedin.com/in/josephpapa3/">LINKEDIN</button>
+		</form>
 		<br>
 		<ul>
 			<li><a href = "./about">ABOUT</a></li>
 			<li><a href = "./me">ME</a></li>
 		</ul>
+		<button id="btn">Click Me!</button>
+		<p>
+			<span id="display"></span>
+			<span id="trigger"></span>
+		</p>
+		<script type="text/javascript">
+			let count = 100;
+			let btn = document.getElementById("btn");
+			let disp = document.getElementById("display");
+			let trig = document.getElementById("trigger");
+			disp.innerHTML = "Click the button " + count + " times";
+			trig.innerHTML = "";
+			btn.onclick = function () {
+				if(count > 0){
+					count--;
+					disp.innerHTML = "Click the button " + count + " times";
+				}
+				if(count == 0){
+				    disp.innerHTML = "";
+					trig.innerHTML = "Bored?";
+				}
+			}
+		</script>
 	</body>
 </html>
