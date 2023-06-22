@@ -5,3 +5,10 @@ body {
 h1,h2,ls {
 	color: blue;
 }
+
+p{
+	background: #555;
+	color: white;
+	padding: 30px;
+	
+}
