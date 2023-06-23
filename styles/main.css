@@ -42,3 +42,15 @@ p{
   background-color: #50ab79;
   color: white;
 }
+
+.footerCopywrite{
+	background-color: #000;
+	text-align: center;
+}
+
+.footerCopywrite p {
+	background-color: #555;
+	color : white;
+	text-align: center;
+	font-size: 10px;
+}
