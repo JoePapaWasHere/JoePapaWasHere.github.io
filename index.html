@@ -28,26 +28,38 @@
 			<button formaction="https://www.linkedin.com/in/josephpapa3/">LINKEDIN</button>
 		</form>
 		<br>
-		<button id="btn">Click Me!</button>
-		<p>
+		<div class="center">
+			<button id="btn" class="bigRed">Click Me!</button>
+		</div>
+		<p class="help">
 			<span id="display"></span>
-			<span id="trigger"></span>
+			<br>
+			<span id="secret" class="secret"></span>
 		</p>
 		<script type="text/javascript">
 			let count = 100;
 			let btn = document.getElementById("btn");
 			let disp = document.getElementById("display");
-			let trig = document.getElementById("trigger");
+			let secret = document.getElementById("secret");
 			disp.innerHTML = "Click the button " + count + " times";
-			trig.innerHTML = "";
+			secret.innerHTML = "";
 			btn.onclick = function () {
+				count--;
+				btn.innerHTML = "Click Me!"
+				secret.innerHTML = "";
 				if(count > 0){
-					count--;
 					disp.innerHTML = "Click the button " + count + " times";
 				}
 				if(count == 0){
-				    disp.innerHTML = "";
-					trig.innerHTML = "Bored?";
+					disp.innerHTML = "Bored?";
+
+				}
+				else if(count == 42){
+					btn.innerHTML  = "Life, the universe, and everything"
+					secret.innerHTML = "You have found the meaning of life";
+				}
+				else if(count == -1000){
+					disp.innerHTML = "Wow really Bored?";
 				}
 			}
 			

@@ -54,3 +54,27 @@ p{
 	text-align: center;
 	font-size: 10px;
 }
+.help {
+	height: 25px;
+}
+
+.help span.secret{
+	font-size: 10px;
+	
+	
+}
+.bigRed {
+	background-color: red;
+	border-color: black;
+	border-bottom-width: 5px;
+	color: white;
+	height: 200px;
+	width: 200px;
+	border-radius:50%;
+	text-align: center;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
