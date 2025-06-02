@@ -9,18 +9,8 @@
 
 
 
-
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById('menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Dark mode persistence
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
     }
@@ -36,7 +26,7 @@
 <body>
   <nav class="navbar">
     <div class="container nav-container">
-      <div class="logo-toggle"><button id="menu-toggle" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+      <div class="logo-toggle">
   <span class="logo">Joe Papa</span>
   <!-- Removed from main section --><button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
     <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
