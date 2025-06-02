@@ -266,3 +266,53 @@ body.dark .toggle-icon {
 .hamburger {
   display: none; /* default hidden */
 }
+
+
+/* Ensure hamburger is hidden by default */
+.hamburger {
+  display: none;
+}
+
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+}
