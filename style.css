@@ -206,3 +206,16 @@ body.dark .toggle-icon {
   fill: currentColor;
   margin: 0 0.25em;
 }
+
+
+.logo-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar .dark-toggle {
+  position: static;
+  padding: 0;
+  background: none;
+}
