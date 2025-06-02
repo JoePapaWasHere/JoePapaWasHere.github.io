@@ -1,0 +1,176 @@
+/* Reset & Base Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 70px;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ======================
+   Navbar
+====================== */
+.navbar {
+  background-color: #222;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.nav-links li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+/* ======================
+   Headings & Content
+====================== */
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+/* ======================
+   Footer
+====================== */
+footer.clean-footer {
+  background-color: #181818;
+  color: #ccc;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-icon {
+  fill: currentColor;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-right a:hover .social-icon {
+  color: #66ccff;
+  transform: scale(1.1);
+}
+
+/* ======================
+   Dark Mode (optional)
+====================== */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .navbar,
+body.dark footer.clean-footer {
+  background-color: #1e1e1e;
+}
+
+body.dark .nav-links li a {
+  color: #eee;
+}
+
+body.dark .footer-right a:hover .social-icon {
+  color: #66ccff;
+}
+
+/* ======================
+   Optional: Dark Mode Toggle Button
+====================== */
+.dark-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2000;
+  border-radius: 5px;
+}
