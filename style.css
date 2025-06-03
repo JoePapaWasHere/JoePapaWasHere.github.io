@@ -22,7 +22,7 @@ main {
 }
 
 header {
-  padding-top: 90px;
+  padding-top: 90px; /* Prevent navbar from overlapping header */
 }
 
 .container {
@@ -54,10 +54,9 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  text-decoration: none;
-  cursor: pointer;
+  text-decoration: none; /* removes underline */
+  cursor: pointer; /* optional: shows pointer on hover */
 }
-
 .logo:link,
 .logo:visited,
 .logo:hover,
@@ -83,7 +82,7 @@ header {
 }
 
 .nav-links li a:hover {
-  background-color: #4caf50;
+  background-color: #4caf50; /* green */
   color: white;
 }
 
@@ -96,6 +95,11 @@ header {
   height: 4px;
   background-color: red;
   border-radius: 2px;
+}
+
+/* Headings & Content */
+h1, h2, h3 {
+  margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -161,15 +165,31 @@ body.dark .footer-right a:hover .social-icon {
   color: #66ccff;
 }
 
-/* Dark toggle button inside navbar */
+/* Dark toggle button */
 .dark-toggle {
-  position: static;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2000;
+  border-radius: 5px;
+}
+
+
+/* Dark Mode Toggle Icon */
+.dark-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 2000;
   padding: 0.5rem;
-  transition: all 0.3s ease;
 }
 
 .toggle-icon {
@@ -188,23 +208,6 @@ body.dark .toggle-icon {
   transform: rotate(30deg);
 }
 
-.sun-icon,
-.moon-icon {
-  width: 24px;
-  height: 24px;
-  display: none;
-}
-
-/* Show sun in light mode */
-body:not(.dark) .sun-icon {
-  display: inline;
-}
-
-/* Show moon in dark mode */
-body.dark .moon-icon {
-  display: inline;
-}
-
 .coffee-icon {
   width: 1em;
   height: 1em;
@@ -213,12 +216,19 @@ body.dark .moon-icon {
   margin: 0 0.25em;
 }
 
+
 .logo-toggle {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.3s ease;
 }
+
+.navbar .dark-toggle {
+  position: static;
+  padding: 0;
+  background: none;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -231,6 +241,8 @@ body.dark .moon-icon {
     width: 100%;
     justify-content: space-between;
   }
+
+  
 
   .nav-links {
     flex-direction: column;
@@ -251,13 +263,113 @@ body.dark .moon-icon {
     width: 100%;
     display: block;
   }
+}
+
+
+
+
+/* Ensure hamburger is hidden by default */
+
+
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+  
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-toggle {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .hamburger {
     display: block;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
   }
 }
+
+.sun-icon,
+.moon-icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+/* Show sun in light mode */
+body:not(.dark) .sun-icon {
+  display: inline;
+}
+
+/* Show moon in dark mode */
+body.dark .moon-icon {
+  display: inline;
+}
+
