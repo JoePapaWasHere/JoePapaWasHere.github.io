@@ -356,3 +356,20 @@ body.dark .toggle-icon {
   }
 }
 
+.sun-icon,
+.moon-icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+/* Show sun in light mode */
+body:not(.dark) .sun-icon {
+  display: inline;
+}
+
+/* Show moon in dark mode */
+body.dark .moon-icon {
+  display: inline;
+}
+
