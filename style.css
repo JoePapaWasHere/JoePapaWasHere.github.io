@@ -298,40 +298,37 @@ body.dark .toggle-icon {
   }
 }
 
-
-/* Hide hamburger by default */
 .hamburger {
   display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
-/* Show hamburger only on mobile */
+/* Mobile styles */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    font-size: 1.5rem;
-    margin-left: auto;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .logo-toggle {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
   }
 
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
-    display: none;
     margin-top: 0.5rem;
   }
 
@@ -348,3 +345,4 @@ body.dark .toggle-icon {
     width: 100%;
   }
 }
+
